@@ -1,0 +1,49 @@
+@import './mixins';
+@import './variables';
+
+footer{
+    background: $primary_color;
+    text-align: center;
+    color: white;
+
+    .footer-content{
+        @include section_padding;
+        @include container;
+        >*{
+            @include internal_block_spacing;
+        }
+
+        .footer-social-menu{
+            >*{
+                @include internal_block_spacing;
+            }
+           .footer-menu-group{
+                @include flex_align_center(center);
+                a{
+                    margin: auto 15px;
+                }
+           }
+        }
+
+        .footer-menu{
+            ul{
+                padding: 0;
+                list-style: none;
+                li{
+                    display: inline-block;
+                    a{
+                        margin: auto 15px;
+                        color: white;
+                        text-decoration: none;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+    .copy-right{
+        width: 100%;
+        padding: 15px 0px;
+        background: black;
+    }
+}
